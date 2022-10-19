@@ -6,6 +6,67 @@
   height: 40vmin;
   pointer-events: none;
 }
+.navbar{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  background-image: linear-gradient(to right, rgb(7, 82, 32), rgb(64, 235, 73));
+  margin-bottom: 5rem;
+  align-items: center;
+}
+
+.nabvar__logo{
+  width: 13rem;
+  height: 13rem;
+}
+.navbar_list{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+li {
+  display: inline;
+}
+.nav-link{
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(20, 17, 12);
+  margin: 1.5rem;
+}
+.dropdown-menu{
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+label{
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+.btn__ingresar{
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+}
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  background-image: linear-gradient(to right, rgb(7, 82, 32), rgb(64, 235, 73));
+  padding: 0.5rem;
+  align-items: center;
+}
+.footer__title,.footer__text{
+  font-weight: bold;
+  color: rgb(20, 17, 12);
+}
+.icon_facebook,.icon_instagram,.icon_linkedin{
+  color: rgb(20, 17, 12);
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,12 +75,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #fff;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
