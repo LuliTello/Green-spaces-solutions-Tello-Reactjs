@@ -1,0 +1,18 @@
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to right, rgb(9, 99, 39), rgb(52, 187, 59));
+    padding: 0.5rem;
+    align-items: center;
+  }
+  .footer__title,.footer__text{
+    font-weight: bold;
+    color: rgb(20, 17, 12);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .icon_facebook,.icon_instagram,.icon_linkedin{
+    color: rgb(20, 17, 12);
+    margin-left: 0.5rem;
+    text-decoration: none;
+  }

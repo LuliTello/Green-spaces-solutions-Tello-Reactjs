@@ -33,22 +33,7 @@ label{
   padding: 0.3rem;
   border-radius: 0.5rem;
 }
-.footer{
-  display: flex;
-  justify-content: space-evenly;
-  background-image: linear-gradient(to right, rgb(9, 99, 39), rgb(64, 235, 73));
-  padding: 0.5rem;
-  align-items: center;
-}
-.footer__title,.footer__text{
-  font-weight: bold;
-  color: rgb(20, 17, 12);
-}
-.icon_facebook,.icon_instagram,.icon_linkedin{
-  color: rgb(20, 17, 12);
-  margin-left: 0.5rem;
-  text-decoration: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

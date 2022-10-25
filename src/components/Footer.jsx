@@ -1,7 +1,8 @@
 import React from 'react'
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import './Footer.css';
+import { Facebook } from 'react-bootstrap-icons';
+import { Instagram } from 'react-bootstrap-icons';
+import { Linkedin } from 'react-bootstrap-icons';
 
 export default function Footer() {
   return (
@@ -11,13 +12,13 @@ export default function Footer() {
         <p className="footer__text">Copyright &copy; 2022. All rights reserved</p>
         <div className="footer__icons">
             <a href="https://es-la.facebook.com/" className="icon_facebook">
-                <FacebookIcon fontSize="large"/>
+                <Facebook/>
             </a>
             <a href="https://instagram.com" className="icon_instagram">
-                <InstagramIcon fontSize="large"/>
+                <Instagram/>
             </a>
             <a href="https://www.linkedin.com/home" className="icon_linkedin">
-                <LinkedInIcon fontSize="large"/>
+                <Linkedin/>
             </a>
         </div>
     </footer>
