@@ -1,141 +1,50 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import logo from '../assets/logo.svg';
 import CartWidget from './CartWidget';
+import './Navbar.css';
 
-
-const pages = ['Inicio', 'Productos', 'Contacto'];
-
-
-function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-
+function BasicExample() {
   return (
-    <AppBar position="static" style={{backgroundImage: `linear-gradient(to right, rgb(7, 82, 32), rgb(64, 235, 73))`}}>
-      <Container maxWidth="xl" >
-        <Toolbar disableGutters style={{display:'flex', flexWrap: 'wrap'}}>
-        <a className="click-logo" href="./index.html">
-            <img className="nabvar__logo" src={logo} alt="logonavbar"/>
+    <Navbar style={{backgroundImage: "linear-gradient(to right, rgb(9, 99, 39), rgb(64, 235, 73))"}} expand="lg">
+      <Container>
+      <a className="click-logo" href="./index.html">
+            <img style={{width:'12rem' }} className="nabvar__logo" src={logo} alt="logonavbar"/>
             </a>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 7,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            
-          </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link style={{color:"#000", fontWeight:"bold"}} href="#home">Inicio</Nav.Link>
+            <NavDropdown style={{color:"#000", fontWeight:"bold"}} title="Productos" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/4.1">Fertilizantes</NavDropdown.Item>
+              <NavDropdown.Item href="#action/4.2">
+                Herbicidas
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/4.3">Insecticidas</NavDropdown.Item>
+              <NavDropdown.Item href="#action/4.4">Semillas</NavDropdown.Item>
               
-            >
-              <MenuIcon fontSize='large' style={{marginLeft:'2rem'}} />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-           
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block', fontWeight: 'bold', fontSize: '1rem' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-          <div>
-                    <form style={{marginRight:'5rem'}} action="" id="form-ingreso" className="dropdown-menu">
-                        
-                        <input style={{marginBottom:'0.5rem', textAlign:'center'}}className="nombreUsuario__input" type="text" id="nombreUsuario" name="nombre" placeholder='Usuario'/>
-                        
-                        <input style={{textAlign:'center'}} className="contraseñaUsuario__input" type="password" id="contraseñaUsuario"
-                            name="contraseña" placeholder='Contraseña'/>
-                        <button type="submit" className="btn__ingresar">Ingresar</button>
-                    </form>
-            </div>  
-            <CartWidget/>         
-          
-        </Toolbar>
+            </NavDropdown>
+            <Nav.Link style={{color:"#000", fontWeight:"bold"}} href="#link">Contacto</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+        <DropdownButton variant="dark" id="dropdown-item-button" title="Login" style={{marginRight:"3rem"}}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Control type="email" placeholder="Usuario" />
+        <Form.Control type="password" placeholder="Contraseña" />
+        <Button variant="success" type="submit" className='btn-login'>
+        Submit
+        </Button>
+        </Form.Group>
+        </DropdownButton>
+        <CartWidget/>
       </Container>
-    </AppBar>
+    </Navbar>
   );
 }
-export default ResponsiveAppBar;
+
+export default BasicExample;

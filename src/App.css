@@ -7,11 +7,6 @@
   pointer-events: none;
 }
 
-.nabvar__logo{
-  width: 13rem;
-  height: 13rem;
-}
-
 li {
   display: inline;
 }
@@ -41,7 +36,7 @@ label{
 .footer{
   display: flex;
   justify-content: space-evenly;
-  background-image: linear-gradient(to right, rgb(7, 82, 32), rgb(64, 235, 73));
+  background-image: linear-gradient(to right, rgb(9, 99, 39), rgb(64, 235, 73));
   padding: 0.5rem;
   align-items: center;
 }
