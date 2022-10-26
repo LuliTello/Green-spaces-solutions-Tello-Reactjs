@@ -1,16 +1,14 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import logo from '../assets/logo.svg';
 import CartWidget from './CartWidget';
 import './Navbar.css';
 
-function BasicExample() {
+function Nabvar() {
   return (
     <Navbar style={{backgroundImage: "linear-gradient(to right, rgb(9, 99, 39), rgb(52, 187, 59))"}} expand="lg">
       <Container>
@@ -29,17 +27,11 @@ function BasicExample() {
             <Nav.Link className='link-contacto' href="https://www.google.com/">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-        <DropdownButton variant="outline-dark" id="dropdown-item-button" title="Login" style={{marginRight:"3rem"}}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control type="email" placeholder="Usuario" />
-        <Form.Control type="password" placeholder="Contraseña" />
-        <Button variant="success" type="submit" className='btn-login'>Submit</Button>
-        </Form.Group>
-        </DropdownButton>
+        <Button variant="outline-dark" style={{marginRight:"3rem"}}>Login</Button> 
         <CartWidget/>
       </Container>
     </Navbar>
   );
 }
 
-export default BasicExample;
+export default Nabvar;
