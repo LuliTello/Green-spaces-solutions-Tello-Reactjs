@@ -8,7 +8,10 @@ import logo from '../assets/logo.svg';
 import CartWidget from './CartWidget';
 import './Navbar.css';
 
+
 function Nabvar() {
+
+  
   return (
     <Navbar style={{backgroundImage: "linear-gradient(to right, rgb(9, 99, 39), rgb(52, 187, 59))"}} expand="lg">
       <Container>
@@ -29,6 +32,7 @@ function Nabvar() {
         </Navbar.Collapse>
         <Button variant="outline-dark" style={{marginRight:"3rem"}}>Login</Button> 
         <CartWidget/>
+        
       </Container>
     </Navbar>
   );

@@ -1,0 +1,23 @@
+.contador{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+.btn-cont{
+    border-radius: 0.5rem;
+    padding: 0.3rem 1.5rem;
+    background-color: rgb(9, 99, 39);
+    font-weight: bold;
+}
+.contador-num{
+    margin: 0.3rem 1rem;
+    text-align: center;
+    font-weight: bold;
+}
+.btn-agregarCarrito{
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgb(9, 99, 39);
+    font-weight: bold;
+}

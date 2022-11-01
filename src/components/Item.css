@@ -1,0 +1,11 @@
+.card-image{
+    width: 95%!important;
+    height: 15rem;
+    margin: 0.5rem ;
+}
+.card-title{
+    margin-bottom: 1rem;
+}
+.card-price{
+    font-weight: bold;
+}
