@@ -1,7 +1,7 @@
 [
     {
        "id":1,
-       "image":"../assets/Glifo.webp",
+       "image":"./src/assets/Glifo.webp",
        "name":"Glifosato",
        "description":"Herbicida hoja ancha",
        "price":150

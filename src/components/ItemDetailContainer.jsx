@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import ItemDetail from './ItemDetail';
 
 
 
@@ -11,7 +12,7 @@ export default function ItemDetailContainer() {
     useEffect(() => {
         
        setTimeout(()=>{
-        fetch("../productos.json")
+        fetch("/productos.json")
       .then((res)=>res.json())
       .then((resJson)=>{
         console.log(resJson);
@@ -20,11 +21,16 @@ export default function ItemDetailContainer() {
       .catch((e)=>{
         console.log(e)
       })
-    },5000)
+    },2000)
     
     }, [])
     
   return (
-    <div>itemdetail</div>
+    <div>
+           
+        <ItemDetail producto = {Item[0]} />
+       
+        
+    </div>
   )
 }
