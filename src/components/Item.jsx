@@ -5,7 +5,8 @@ import './Item.css';
 
 export default function Item({image, name, description, price, id}) {
   return (
-    <div>
+    <div className='card'>
+      
         <Card style={{ width: '18rem', }}>
       <Card.Img className='card-image' variant="top" src={image} alt={image} />
       <Card.Body>
@@ -14,7 +15,7 @@ export default function Item({image, name, description, price, id}) {
         <Card.Text className='card-price'>
           USD {price}
         </Card.Text>
-        <Link id={id} to={"/item/"} variant="success">Ver Mas</Link>
+        <Link id={id} to={"/item/"} variant="success">Ver Detalle</Link>
       </Card.Body>
     </Card>
     </div>

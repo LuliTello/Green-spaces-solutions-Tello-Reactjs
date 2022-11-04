@@ -9,7 +9,9 @@ export default function ItemList({Listado}) {
       {!Listado.length && "Loading..."}
         {
         Listado.map((el) => {
-           return <div key={el.id}> <Item image={el.image} name={el.name} description={el.description} price={el.price} /></div>
+           return <div key={el.id}> 
+           
+           <Item image={el.image} name={el.name} description={el.description} price={el.price} /></div>
         })
     }
         </div>
