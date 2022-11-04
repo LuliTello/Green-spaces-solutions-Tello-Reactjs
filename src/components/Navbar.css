@@ -1,10 +1,19 @@
 .mb-3{
     text-align: center;
 }
-.link-productos,.link-inicio,.link-contacto{
-    color:"#000";
-    font-weight:"bold"
+.link-inicio,.link-contacto{
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 2rem;
+    
 }
 .btn-login{
     margin-top: 1rem;
+}
+.link-categoria{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin:0 0.5rem;
 }

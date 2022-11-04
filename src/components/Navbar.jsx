@@ -22,13 +22,13 @@ function Nabvar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link className='link-inicio' to="/">Inicio</Link>
+            <Link style={{ color:'#000',fontWeight:'bold'}} className='link-inicio' to="/">Inicio</Link>
             <NavDropdown className='link-productos'  title="Productos" id="basic-nav-dropdown">
-              <Link to="/category/fertilizantes">Fertilizantes</Link>
-              <Link to="/category/herbicidas">Herbicidas</Link>
-              <Link to="/category/Insecticidas">Insecticidas</Link>
+              <Link className='link-categoria' to="/category/fertilizantes">Fertilizantes</Link>
+              <Link className='link-categoria' to="/category/herbicidas">Herbicidas</Link>
+              <Link className='link-categoria' to="/category/Insecticidas">Insecticidas</Link>
             </NavDropdown>
-            <Link className='link-contacto' to="/contacto">Contacto</Link>
+            <Link style={{ color:'#000',fontWeight:'bold'}} className='link-contacto' to="/contacto">Contacto</Link>
           </Nav>
         </Navbar.Collapse>
         <Button variant="outline-dark" style={{marginRight:"3rem"}}>Login</Button> 
