@@ -7,6 +7,17 @@ export default function ItemCount({initial, stock, onAdd}) {
 //contador
     const [cont, setCont] = useState(initial);
 
+    let sumar = () =>{
+      if (cont < stock){
+      setCont(cont + 1)
+      }
+    };
+
+    let restar = () =>{
+      if (cont > 0){
+      setCont(cont - 1)
+      }
+    };
     useEffect(() => {
     console.log(cont)
 
@@ -21,15 +32,13 @@ export default function ItemCount({initial, stock, onAdd}) {
   return (
     <div>
         <div className='contador'>
-        <button disabled={cont<=0} className='btn-cont' onClick={()=>{
-        setCont(cont-1)
-      }}>-</button>
+        <button className='btn-cont' onClick={restar}>-</button>
         <p className='contador-num'>{cont}</p>
-      <button disabled={cont>=stock} className='btn-cont' onClick={()=>{
-        setCont(cont+1)
-      }}>+</button>
+      <button className='btn-cont' onClick={sumar}
+      >+</button>
       </div>
-        <button disabled={stock<=0} className='btn-agregarCarrito' onClick={()=>onAdd(cont)}>Agregar al carrito</button>
-       </div>
+        <button disabled={stock<0} className='btn-agregarCarrito' onClick={()=>onAdd(cont)}>Agregar al carrito</button>
+    </div>
+
   )
 }

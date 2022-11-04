@@ -1,7 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Checkout from './components/Checkout';
 import Footer from './components/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
@@ -24,8 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/contacto" element={<Contacto />} />
-        <Route />
-        <Route />
+        <Route path= "/category/:idcategory" element={<ItemListContainer />} />
+        <Route path= "/item/:iditem" element={<ItemDetailContainer />}/>
         <Route />
       </Routes>
       {/* PONGO COMPONENTES QUE QUIERO QUE ESTEN EN TODAS LAS RUTAS ABAJO DE TODO*/}

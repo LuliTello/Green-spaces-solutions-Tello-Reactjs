@@ -1,34 +1,35 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ItemDetail from './ItemDetail';
-
-
+import {useParams} from "react-router-dom";
+import {Productos} from './data.js';
 
 export default function ItemDetailContainer() {
 
-    
-    const [Item, setItem] = useState([]);
+    const {iditem} = useParams();
+    const [item, setItem] = useState({});
 
     useEffect(() => {
-        
-       setTimeout(()=>{
-        fetch("/productos.json")
-      .then((res)=>res.json())
-      .then((resJson)=>{
-        console.log(resJson);
-        setItem(resJson);
+      let productosDetail = new Promise ((res, rej)=>{
+        setTimeout(()=>{
+            res(Productos.find((item) => item.id === iditem))
+        },2000);
+      })
+
+      productosDetail.then((res)=>{
+        setItem(res)
+        console.log(res)
       })
       .catch((e)=>{
         console.log(e)
       })
-    },2000)
     
-    }, [])
+    }, [iditem])
     
   return (
     <div>
            
-        <ItemDetail producto = {Item[0]} />
+        <ItemDetail item = {item} />
        
         
     </div>

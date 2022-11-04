@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from "react-router-dom";
 import './Item.css';
 
 export default function Item({image, name, description, price, id}) {
@@ -14,7 +14,7 @@ export default function Item({image, name, description, price, id}) {
         <Card.Text className='card-price'>
           USD {price}
         </Card.Text>
-        <Button id={id} variant="success">Agregar</Button>
+        <Link id={id} to={"/item/"} variant="success">Ver Mas</Link>
       </Card.Body>
     </Card>
     </div>
