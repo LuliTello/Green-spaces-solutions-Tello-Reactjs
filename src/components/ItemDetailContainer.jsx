@@ -8,7 +8,7 @@ export default function ItemDetailContainer() {
 
  
     const {iditem} = useParams();
-    const [item, setItem] = useState({});
+    const [item, setItem] = useState([]);
 
     useEffect(() => {
       let productosDetail = new Promise ((res, rej)=>{
