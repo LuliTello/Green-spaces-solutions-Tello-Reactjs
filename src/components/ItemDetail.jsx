@@ -15,8 +15,11 @@ export default function ItemDetail({item}) {
       {item.id ? (
         <>
       
-      <Card className='card' style={{ width: '18rem', }}>
+      <Card className='card-detail' style={{ width: '35rem' }}>
+        <div>
     <Card.Img className='card-image' variant="top" src={item.image} alt={item.image} />
+    </div>
+    <div>
     <Card.Body>
       <Card.Title className='card-title'>{item.name}</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{item.description}</Card.Subtitle>
@@ -27,6 +30,7 @@ export default function ItemDetail({item}) {
       <ItemCount initial={0} stock={25} onAdd={onAdd}/>
       <Card.Text> *Precio por {item.unit}</Card.Text>
     </Card.Body>
+    </div>
   </Card>
 
   </>
