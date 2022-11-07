@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import { Productos } from './data.js';
+import { Productos } from '../data/data.js';
 import ItemList from './ItemList';
 
 export default function ItemListContainer({greetingMensaje}) {
  
  const {idcategory} = useParams();
-
 
     const [Listado, setListado]= useState([]);
 

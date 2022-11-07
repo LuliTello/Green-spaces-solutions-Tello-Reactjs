@@ -11,7 +11,7 @@ export default function ItemList({Listado}) {
         Listado.map((el) => {
            return <div key={el.id}> 
            
-           <Item image={el.image} name={el.name} description={el.description} price={el.price} /></div>
+           <Item el={el} /></div>
         })
     }
         </div>
