@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Productos } from '../data/data.js';
 import ItemList from './ItemList';
 
-export default function ItemListContainer({greetingMensaje}) {
+export default function ItemListContainer({}) {
  
  const {idcategory} = useParams();
 
@@ -32,11 +32,7 @@ export default function ItemListContainer({greetingMensaje}) {
     }, [idcategory])
     
   return (
-    <div style={{ padding:'5rem 0', backgroundColor:'#ffebcd'}}>
-      
-    <p style={{color:'#1b832a',fontSize: '2rem',
-   fontWeight: 'bold', fontStyle: 'italic'}}>{greetingMensaje}</p>
-       
+    <div style={{ padding:'2rem 0', backgroundColor:'#ffebcd'}}>       
         <ItemList Listado = {Listado}/>
      </div>
   )

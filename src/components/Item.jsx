@@ -15,6 +15,7 @@ export default function Item({el}) {
         <Card.Text className='card-price'>
           USD {el.price}
         </Card.Text>
+        <Card.Text className='unidad'>Presentacion x {el.unit}</Card.Text>
         <Link className='link-detalle' to={`/item/${el.id}`} variant="success">Ver Detalle</Link>
       </Card.Body>
     </Card>

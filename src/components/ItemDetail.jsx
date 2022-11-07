@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
+import './ItemDetail.css';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 export default function ItemDetail({item}) {
 
@@ -9,7 +11,11 @@ export default function ItemDetail({item}) {
      }
 
   return (
-    <div> <Card style={{ width: '18rem', }}>
+    <div> 
+      {item.id ? (
+        <>
+      
+      <Card className='card' style={{ width: '18rem', }}>
     <Card.Img className='card-image' variant="top" src={item.image} alt={item.image} />
     <Card.Body>
       <Card.Title className='card-title'>{item.name}</Card.Title>
@@ -17,8 +23,18 @@ export default function ItemDetail({item}) {
       <Card.Text className='card-price'>
         USD {item.price}
       </Card.Text>
+      
       <ItemCount initial={0} stock={25} onAdd={onAdd}/>
+      <Card.Text> *Precio por {item.unit}</Card.Text>
     </Card.Body>
-  </Card></div>
+  </Card>
+
+  </>
+  ) : (
+    <>
+   <ProgressBar variant='success' animated now={45} />
+    </>
+  )}
+  </div>
   )
 }
