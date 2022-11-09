@@ -34,8 +34,7 @@ export default function ItemCount({initial, stock, onAdd}) {
         <div className='contador'>
         <button className='btn-cont' onClick={restar}>-</button>
         <p className='contador-num'>{cont}</p>
-      <button className='btn-cont' onClick={sumar}
-      >+</button>
+      <button className='btn-cont' onClick={sumar}>+</button>
       </div>
         <button disabled={stock<0} className='btn-agregarCarrito' onClick={()=>onAdd(cont)}>Agregar al carrito</button>
     </div>

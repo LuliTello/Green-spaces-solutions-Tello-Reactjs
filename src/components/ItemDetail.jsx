@@ -27,7 +27,7 @@ export default function ItemDetail({item}) {
         USD {item.price}
       </Card.Text>
       
-      <ItemCount initial={0} stock={25} onAdd={onAdd}/>
+      <ItemCount initial={1} stock={25} onAdd={onAdd}/>
       <Card.Text> *Precio por {item.unit}</Card.Text>
     </Card.Body>
     </div>
