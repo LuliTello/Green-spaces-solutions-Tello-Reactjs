@@ -7,6 +7,8 @@ import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
 import Contacto from './components/Contacto';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import ItemDetail from './components/ItemDetail';
+import Cart from './components/Cart';
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
         <Route path="/contacto" element={<Contacto />} />
         <Route path= "/category/:idcategory" element={<ItemListContainer />} />
         <Route path= "/item/:iditem" element={<ItemDetailContainer />}/>
-        <Route />
+        <Route path="/cart" element={<Cart/>}/>
       </Routes>
       {/* PONGO COMPONENTES QUE QUIERO QUE ESTEN EN TODAS LAS RUTAS ABAJO DE TODO*/}
       <Footer />

@@ -1,13 +1,17 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
+import { useState } from 'react';
 import './ItemDetail.css';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { Link } from 'react-router-dom';
 
 export default function ItemDetail({item}) {
 
+  const [cart, setCart] = useState(false);
+
     const onAdd = (valor) =>{
-        console.log(valor)
+        setCart(true);
      }
 
   return (
@@ -26,9 +30,11 @@ export default function ItemDetail({item}) {
       <Card.Text className='card-price'>
         USD {item.price}
       </Card.Text>
+      {
+        cart ? <Link className='btn-finalizar' to={"/cart"}>Finalizar compra</Link> : <ItemCount initial={1} stock={25} onAdd={onAdd}/>
+      }
       
-      <ItemCount initial={1} stock={25} onAdd={onAdd}/>
-      <Card.Text> *Precio por {item.unit}</Card.Text>
+      <Card.Text style={{marginTop:'1rem'}} > *Precio por {item.unit}</Card.Text>
     </Card.Body>
     </div>
   </Card>
