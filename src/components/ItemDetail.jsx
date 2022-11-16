@@ -5,13 +5,18 @@ import { useState } from 'react';
 import './ItemDetail.css';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { Link } from 'react-router-dom';
+import { cartContext } from './CartContext';
+import { useContext } from 'react';
 
 export default function ItemDetail({item}) {
 
   const [cart, setCart] = useState(false);
 
-    const onAdd = (valor) =>{
+  const { addItem} = useContext(cartContext)
+    const onAdd = (cantidad) =>{
         setCart(true);
+        addItem(item, cantidad)
+        console.log(`compraste ${cantidad} unidades`);
      }
 
   return (
@@ -30,8 +35,9 @@ export default function ItemDetail({item}) {
       <Card.Text className='card-price'>
         USD {item.price}
       </Card.Text>
+      <Card.Text>Stock disponible:</Card.Text>
       {
-        cart ? <Link className='btn-finalizar' to={"/cart"}>Finalizar compra</Link> : <ItemCount initial={1} stock={25} onAdd={onAdd}/>
+        cart ? <Link className='btn-finalizar' to={"/cart"} >Finalizar compra</Link> : <ItemCount initial={1} stock={25} onAdd={onAdd}/>
       }
       
       <Card.Text style={{marginTop:'1rem'}} > *Precio por {item.unit}</Card.Text>

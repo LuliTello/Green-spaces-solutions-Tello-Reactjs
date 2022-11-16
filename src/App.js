@@ -1,23 +1,20 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import Cart from './components/Cart';
+import Contacto from './components/Contacto';
 import Footer from './components/Footer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
-import Contacto from './components/Contacto';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import ItemDetail from './components/ItemDetail';
-import Cart from './components/Cart';
+import CartContext from './components/CartContext';
 
 
 function App() {
-  function greeting(){
-    let greetingMensaje = "Saludos desde Green Spaces Solutions"
-    return greetingMensaje
-  }
-  
+    
   return (
+    <CartContext>
     <BrowserRouter>
       {/* PONGO COMPONENTES QUE QUIERO QUE ESTEN EN TODAS LAS RUTAS */}
       <Navbar />
@@ -32,7 +29,7 @@ function App() {
       {/* PONGO COMPONENTES QUE QUIERO QUE ESTEN EN TODAS LAS RUTAS ABAJO DE TODO*/}
       <Footer />
     </BrowserRouter>
-
+   </CartContext>
   );
 }
 

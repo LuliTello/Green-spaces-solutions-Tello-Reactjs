@@ -1,0 +1,44 @@
+[
+    {
+       "id":1,
+       "image":"./src/assets/Glifo.webp",
+       "name":"Glifosato",
+       "description":"Herbicida hoja ancha",
+       "price":150
+    },
+    {
+       "id":2,
+       "image":"../assets/Cletodim.jpg",
+       "name":"Cletodim",
+       "description":"Herbicida graminicida",
+       "price":200
+    },
+    {
+       "id":3,
+       "image":"../assets/Dimet.jpg",
+       "name":"Dimetoato",
+       "description":"Insecticida sistemico",
+       "price":150
+    },
+    {
+       "id":4,
+       "image":"../assets/Ciper.jpg",
+       "name":"Cipermetrina",
+       "description":"Insecticida de contacto",
+       "price":150
+    },
+    {
+       "id":5,
+       "image":"../assets/urea.webp",
+       "name":"Urea",
+       "description":"Fertilizante con nitrogeno",
+       "price":150
+    },
+    {
+       "id":6,
+       "image":"../assets/SPT.webp",
+       "name":"Superfosfato Triple",
+       "description":"Fertilizante con fosforo",
+       "price":150
+    }
+ ]

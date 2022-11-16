@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Productos } from '../data/data.js';
 import ItemList from './ItemList';
 
-export default function ItemListContainer({}) {
+export default function ItemListContainer() {
  
  const {idcategory} = useParams();
 

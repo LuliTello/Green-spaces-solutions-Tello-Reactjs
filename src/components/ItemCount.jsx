@@ -19,15 +19,9 @@ export default function ItemCount({initial, stock, onAdd}) {
       }
     };
     useEffect(() => {
-    console.log(cont)
+      setCont(initial)
 
-    }, [])
-
-//cambio
-    useEffect(()=>{
-       
-    }, []);
-
+    }, [initial])
 
   return (
     <div>

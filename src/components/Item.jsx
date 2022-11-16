@@ -2,10 +2,14 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import './Item.css';
+import { cartContext } from './CartContext';
+import { useContext } from 'react';
 
 export default function Item({el}) {
+
+  const {darkMode, setDarkMode} = useContext(cartContext)
   return (
-    <div className='card'>
+    <div className='card' style={{color: darkMode ? "white" : "black", backgroundColor: darkMode ? "black" : "white" }}>
       
         <Card style={{ width: '18rem', }}>
       <Card.Img className='card-image' variant="top" src={el.image} alt={el.image} />
@@ -19,6 +23,7 @@ export default function Item({el}) {
         <Link className='link-detalle' to={`/item/${el.id}`} variant="success">Ver Detalle</Link>
       </Card.Body>
     </Card>
+    <button onClick={()=>setDarkMode(!darkMode)}>Cambiar Dark</button>
     </div>
   )
 }
