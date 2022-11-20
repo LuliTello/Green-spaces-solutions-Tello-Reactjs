@@ -24,7 +24,7 @@ export default function ItemDetail({item}) {
       {item.id ? (
         <>
       
-      <Card className='card-detail' style={{ width: '35rem' }}>
+      <Card className='card-detail' style={{ width: '40rem' }}>
         <div>
     <Card.Img className='card-image' variant="top" src={item.image} alt={item.image} />
     </div>
@@ -35,7 +35,7 @@ export default function ItemDetail({item}) {
       <Card.Text className='card-price'>
         USD {item.price}
       </Card.Text>
-      <Card.Text>Stock disponible:</Card.Text>
+      <Card.Text>Stock disponible: {item.stock}</Card.Text>
       {
         cart ? <Link className='btn-finalizar' to={"/cart"} >Finalizar compra</Link> : <ItemCount initial={1} stock={25} onAdd={onAdd}/>
       }

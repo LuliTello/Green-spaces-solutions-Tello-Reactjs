@@ -12,22 +12,25 @@ const {carrito, totalPrice, clear} = useContext(cartContext);
 if(carrito.length === 0){
   return(
   <>
+  <div style={{margin: '1rem auto', textAlign: 'center', backgroundColor:'rgb(240, 253, 165)'}}>
   <p>No hay productos en el carrito.</p>
-  <Link to='/'>Seguir comprando</Link>
+  <Link className='btn_seguir' to='/'>Seguir comprando</Link>
+  </div>
   </>
   );
 }
   return (
-    <div>
+    <div style={{ padding:'2rem 0', backgroundColor:'rgb(240, 253, 165)'}}>
       <div className='itemCart__flex'>
       {carrito.map(product =>
       <ItemCart key={product.id} product={product}/>)}
       </div>
+      <div className='contenedor_total'>
       <h3>
         Total USD: {totalPrice()}
        </h3>
-       <Button variant="success" onClick = {()=> clear()}>Vaciar Carrito</Button>
-
+       <Button className='clear_btn' variant="success" onClick = {()=> clear()}>Vaciar Carrito</Button>
+       </div>
     </div>
   )
 }

@@ -14,7 +14,7 @@ function Nabvar() {
 
   
   return (
-    <Navbar style={{backgroundImage: "linear-gradient(to right, rgb(9, 99, 39), rgb(52, 187, 59))"}} expand="lg">
+    <Navbar style={{backgroundImage: "linear-gradient(to right, rgb(27, 136, 41), rgb(52, 192, 71))"}} expand="lg">
       <Container>
       <Link className="click-logo" to="/">
         <img style={{width:'12rem' }} className="nabvar__logo" src={logo} alt="logonavbar"/>

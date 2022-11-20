@@ -30,7 +30,7 @@ export default function ItemListContainer() {
     }, [idcategory])
     
   return (
-    <div style={{ padding:'2rem 0', backgroundColor:'rgb(253, 246, 227) '}}>       
+    <div style={{ padding:'2rem 0', backgroundColor:'rgb(240, 253, 165)'}}>       
         <ItemList listado = {listado}/>
      </div>
   )

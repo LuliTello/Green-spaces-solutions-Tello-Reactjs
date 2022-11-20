@@ -1,7 +1,7 @@
 .footer{
     display: flex;
     justify-content: space-evenly;
-    background-image: linear-gradient(to right, rgb(9, 99, 39), rgb(52, 187, 59));
+    background-image: linear-gradient(to right, rgb(27, 136, 41), rgb(52, 192, 71));
     padding: 0.5rem;
     align-items: center;
   }

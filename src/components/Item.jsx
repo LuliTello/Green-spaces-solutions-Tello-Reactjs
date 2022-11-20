@@ -2,15 +2,13 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import './Item.css';
-import { cartContext } from './CartContext';
-import { useContext } from 'react';
 
 export default function Item({el}) {
 
   return (
     <div className='card'>
       
-        <Card style={{ width: '18rem', }}>
+        <Card className='card-item' style={{ width: '18rem', }}>
       <Card.Img className='card-image' variant="top" src={el.image} alt={el.image} />
       <Card.Body>
         <Card.Title className='card-title'>{el.name}</Card.Title>

@@ -11,8 +11,8 @@ export default function CartWidget() {
   return (
     <div>
       <button className='btn-card'>
-      <Badge bg="success">
-      <Cart4 size={25} />
+      <Badge text="dark" bg="transparent">
+      <Cart4 style={{color:'000'}} size={26} />
       {totalProducts()}</Badge>
       </button>
     </div>

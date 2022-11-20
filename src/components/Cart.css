@@ -5,3 +5,23 @@
     flex-wrap: wrap;
     margin: 1rem 0;
 }
+.btn_seguir{
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    background-color: rgb(27, 136, 41);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    
+}
+.contenedor_total{
+    text-align: right;
+    margin-right: 1rem;
+}
+.clear_btn{
+    
+    color: #000;
+    font-weight: bold;
+}
