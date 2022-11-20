@@ -2,13 +2,13 @@ import React from 'react'
 import Item from './Item';
 import './ItemList.css'
 
-export default function ItemList({Listado}) {
+export default function ItemList({listado}) {
 
   return (
     <div className='card-container'>
-      {!Listado.length && "Loading..."}
+      {!listado.length && "Loading..."}
         {
-        Listado.map((el) => {
+        listado.map((el) => {
            return <div key={el.id}> 
            
            <Item el={el} /></div>

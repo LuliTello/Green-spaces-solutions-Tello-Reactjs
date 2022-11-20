@@ -1,39 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
-import { Productos } from '../data/data.js';
 import ItemList from './ItemList';
+import { getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
 
 export default function ItemListContainer() {
  
  const {idcategory} = useParams();
 
-    const [Listado, setListado]= useState([]);
+    const [listado, setListado]= useState([]);
 
     useEffect(() => {
-      let render = new Promise ((res, rej)=>{
-        setTimeout(()=>{
-            res(Productos)
-        },2000);
-      })
-
-      render.then((res)=>{
-         if (idcategory){
-            setListado(res.filter((item) => item.category === idcategory));
-         } else {
-            setListado(res)
-         }
-        
-        console.log(res)
-      })
-      .catch((e)=>{
-        console.log(e)
-      })
+      const db = getFirestore();
+      let listado;
+      if (idcategory){
+      listado = query(collection(db, 'productos'), where ('category', '==', idcategory));
+    } else {
+      listado = collection(db, 'productos')  
+    }
     
+      getDocs(listado).then((res)=> {
+
+        const arrayNorm = res.docs.map((element)=>{
+          return {id: element.id , category: element.data().category, name: element.data().name, description: element.data().description, unit: element.data().unit, price: element.data().price, stock: element.data().stock, image: element.data().image}
+        });
+
+          setListado(arrayNorm)
+      
+    });
     }, [idcategory])
     
   return (
     <div style={{ padding:'2rem 0', backgroundColor:'rgb(253, 246, 227) '}}>       
-        <ItemList Listado = {Listado}/>
+        <ItemList listado = {listado}/>
      </div>
   )
 }

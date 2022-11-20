@@ -6,9 +6,6 @@ export const cartContext = createContext();
 
 export default function CartContext({children}) {
 
-    
-const [darkMode, setDarkMode] = useState(false);
-
 const [carrito, setCarrito] = useState([]);
 
 //agregar productos
@@ -44,7 +41,7 @@ const totalProducts = () => carrito.reduce((acc,product)=> acc + product.cantida
 
 
   return (
-    <cartContext.Provider value={{darkMode, setDarkMode, carrito, setCarrito, addItem, isInCart, removeItem, clear, totalPrice, totalProducts }} >
+    <cartContext.Provider value={{carrito, setCarrito, addItem, isInCart, removeItem, clear, totalPrice, totalProducts }} >
         {children}
     </cartContext.Provider>
   )

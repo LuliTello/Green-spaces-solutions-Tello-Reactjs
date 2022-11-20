@@ -2,29 +2,19 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import ItemDetail from './ItemDetail';
 import {useParams} from "react-router-dom";
-import {Productos} from '../data/data.js';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 export default function ItemDetailContainer() {
  
     const {iditem} = useParams();
     const [item, setItem] = useState({});
 
-    useEffect(() => {
-      let productosDetail = new Promise ((res, rej)=>{
-        setTimeout(()=>{
-            res(Productos)
-        },2000);
-      })
+    useEffect(()=>{
+      const db = getFirestore();
+    const docSinNorm = doc(db, 'productos', iditem)
+    getDoc(docSinNorm).then((res=> setItem({id: res.id, ...res.data()})))
 
-      productosDetail.then((res)=>{
-        setItem(res.find((item) => item.id == iditem))
-        console.log(res)
-      })
-      .catch((e)=>{
-        console.log(e)
-      })
-    
-    }, [iditem])
+  }, [iditem])
     
   return (
     <div>
