@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cart4 } from 'react-bootstrap-icons';
 import Badge from 'react-bootstrap/Badge';
-import './CartWidget.css';
+import '../css/CartWidget.css';
 import { cartContext } from './CartContext'
 import { useContext } from 'react';
 

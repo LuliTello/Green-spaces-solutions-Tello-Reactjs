@@ -1,14 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { cartContext } from './CartContext'
 import { Link } from 'react-router-dom';
 import ItemCart from './ItemCart';
 import Button from 'react-bootstrap/Button';
-import './Cart.css'
+import '../css/Cart.css'
 
 export default function Cart() {
 
 const {carrito, totalPrice, clear} = useContext(cartContext);
-
+const [nombre, setNombre] = useState('');
+const [tel, setTel] = useState('');
+const [email, setEmail] = useState('');
+function terminarCompra(){
+  const totalAPagar= carrito.reduce((acc, item)=>acc + item.price*item.cantidad, 0);
+}
 if(carrito.length === 0){
   return(
   <>
@@ -30,6 +35,11 @@ if(carrito.length === 0){
         Total USD: {totalPrice()}
        </h3>
        <Button className='clear_btn' variant="success" onClick = {()=> clear()}>Vaciar Carrito</Button>
+       <input type="text" placeholder='nombre' value={nombre} onChange={(e)=>setNombre(e.target.value)} />
+      <input type="number" placeholder='Telefono' value={tel} onChange={(e)=>setTel(e.target.value)}/>
+      <input type="email" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+
+       <Button onClick={()=>terminarCompra([])}>Terminar Compra</Button>
        </div>
     </div>
   )

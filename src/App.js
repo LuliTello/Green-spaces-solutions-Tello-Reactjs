@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer';
 import Navbar from './components/Navbar';
 import CartContext from './components/CartContext';
+import Checkout from './components/Checkout';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       {/* ACA DECLARO RUTAS PUNTUALES */}
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
+        <Route path="/checkout" element={<Checkout />}/>
         <Route path="/contacto" element={<Contacto />} />
         <Route path= "/category/:idcategory" element={<ItemListContainer />} />
         <Route path= "/item/:iditem" element={<ItemDetailContainer />}/>

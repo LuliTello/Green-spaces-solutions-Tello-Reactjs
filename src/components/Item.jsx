@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
-import './Item.css';
+import '../css/Item.css';
 
 export default function Item({el}) {
 

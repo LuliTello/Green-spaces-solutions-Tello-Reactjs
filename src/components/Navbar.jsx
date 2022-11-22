@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from '../assets/logo.svg';
 import CartWidget from './CartWidget';
-import './Navbar.css';
+import '../css/Navbar.css';
 import {Link} from 'react-router-dom';
 
 
@@ -28,6 +28,7 @@ function Nabvar() {
               <Link className='link-categoria' to="/category/herbicidas">Herbicidas</Link>
               <Link className='link-categoria' to="/category/insecticidas">Insecticidas</Link>
             </NavDropdown>
+            <Link style={{ color:'#000',fontWeight:'bold'}} className='link-checkout' to="/checkout">Checkout</Link>
             <Link style={{ color:'#000',fontWeight:'bold'}} className='link-contacto' to="/contacto">Contacto</Link>
           </Nav>
         </Navbar.Collapse>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Footer.css';
+import '../css/Footer.css';
 import { Facebook } from 'react-bootstrap-icons';
 import { Instagram } from 'react-bootstrap-icons';
 import { Linkedin } from 'react-bootstrap-icons';

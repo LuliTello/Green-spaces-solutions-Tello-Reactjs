@@ -1,11 +1,14 @@
 .mb-3{
     text-align: center;
 }
-.link-inicio,.link-contacto{
+.link-inicio,.link-contacto,.link-checkout{
     text-transform: uppercase;
     text-decoration: none;
     margin-top: 2rem;
     
+}
+.link-checkout{
+    margin-right: 1rem;
 }
 .btn-login{
     margin-top: 1rem;

@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ItemCount from './ItemCount';
 import { useState } from 'react';
-import './ItemDetail.css';
+import '../css/ItemDetail.css';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { Link } from 'react-router-dom';
 import { cartContext } from './CartContext';
@@ -37,7 +37,7 @@ export default function ItemDetail({item}) {
       </Card.Text>
       <Card.Text>Stock disponible: {item.stock}</Card.Text>
       {
-        cart ? <Link className='btn-finalizar' to={"/cart"} >Finalizar compra</Link> : <ItemCount initial={1} stock={25} onAdd={onAdd}/>
+        cart ? <Link className='btn-finalizar' to={"/cart"} >Finalizar compra</Link> : <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
       }
       
       <Card.Text style={{marginTop:'1rem'}} > *Precio por {item.unit}</Card.Text>

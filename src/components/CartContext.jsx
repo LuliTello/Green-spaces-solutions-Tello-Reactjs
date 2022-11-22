@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 
 
 export const cartContext = createContext();
@@ -7,6 +7,9 @@ export const cartContext = createContext();
 export default function CartContext({children}) {
 
 const [carrito, setCarrito] = useState([]);
+const [totalAPagar, setTotalAPagar] = useState([])
+//verificar si esta el producto en el carrito
+const isInCart = (id) => carrito.find(product=>product.id === id) ? true : false;
 
 //agregar productos
 function addItem (item, cantidad){
@@ -23,9 +26,6 @@ function addItem (item, cantidad){
     console.log(newCarrito)
 }
 
-//verificar si esta el producto en el carrito
-const isInCart = (id) => carrito.find(product=>product.id === id) ? true : false;
-
 //remover producto del carrito
 const removeItem = (id) => setCarrito(carrito.filter(product=>product.id !==id));
 
@@ -39,9 +39,13 @@ const totalPrice = () => carrito.reduce((acc,product) => acc + product.cantidad 
 //total productos
 const totalProducts = () => carrito.reduce((acc,product)=> acc + product.cantidad, 0);
 
+useEffect(() => {
+  const total = carrito.reduce((acc, product)=> acc + product.cantidad * product.price, 0);
+  setTotalAPagar(total)
+}, [carrito])
 
   return (
-    <cartContext.Provider value={{carrito, setCarrito, addItem, isInCart, removeItem, clear, totalPrice, totalProducts }} >
+    <cartContext.Provider value={{carrito, setCarrito, addItem, isInCart, removeItem, clear, totalPrice, totalProducts, totalAPagar }} >
         {children}
     </cartContext.Provider>
   )

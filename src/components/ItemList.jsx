@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './Item';
-import './ItemList.css'
+import '../css/ItemList.css'
 
 export default function ItemList({listado}) {
 
