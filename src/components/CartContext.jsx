@@ -6,7 +6,7 @@ export const cartContext = createContext();
 
 export default function CartContext({children}) {
 
-const [carrito, setCarrito] = useState([]);
+const [carrito, setCarrito] = useState(JSON.parse(localStorage.getItem("carrito"))||[]);
 const [totalAPagar, setTotalAPagar] = useState([])
 //verificar si esta el producto en el carrito
 const isInCart = (id) => carrito.find(product=>product.id === id) ? true : false;
