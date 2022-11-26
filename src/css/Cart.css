@@ -1,3 +1,8 @@
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .itemCart__flex{
     display: flex;
     flex-direction: row;
@@ -11,17 +16,21 @@
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
-    background-color: rgb(27, 136, 41);
+    
     border-radius: 0.5rem;
     padding: 0.5rem;
     
 }
-.contenedor_total{
+.contenedor_btn{
     text-align: right;
     margin-right: 1rem;
+    margin-left: 2rem ;
+    display: flex;
+    flex-direction: column;
 }
-.clear_btn{
-    
+.clear_btn, .fin_btn{
+   
     color: #000;
     font-weight: bold;
+    margin: 0.5rem auto;
 }

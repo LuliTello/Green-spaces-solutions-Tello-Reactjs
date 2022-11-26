@@ -33,7 +33,7 @@ export default function ItemDetail({item}) {
       <Card.Title className='card-title'>{item.name}</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">{item.description}</Card.Subtitle>
       <Card.Text className='card-price'>
-        USD {item.price}
+        Precio Unitario USD {item.price}
       </Card.Text>
       <Card.Text>Stock disponible: {item.stock}</Card.Text>
       {

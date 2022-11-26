@@ -35,7 +35,7 @@ function handleClickBuyButton(){
   return (
     <>
     {pedidoInsertadoId ? (
-      "Gracias por su compra! El N° de pedido es: " + pedidoInsertadoId
+      "Gracias por su compra! El detalle llegará en breve a su email. El N° de pedido es: " + pedidoInsertadoId
        ) : (
     <div >
       <h2 className='check_titulo'>Ingrese sus datos para terminar la compra</h2>

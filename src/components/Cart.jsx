@@ -23,16 +23,17 @@ if(carrito.length === 0){
   );
 }
   return (
-    <div style={{ padding:'2rem 0'}}>
+    <div className='contenido' style={{ padding:'2rem 0'}}>
       <div className='itemCart__flex'>
       {carrito.map(product =>
       <ItemCart key={product.id} product={product}/>)}
       </div>
-      <div className='contenedor_total'>
+      <div className='contenedor_btn'>
+
+        <h3>Total Compra USD: {totalPrice()}</h3>
        <Button className='clear_btn' variant="success" onClick = {()=> clear()}>VACIAR CARRITO</Button>
        
-
-       <Button className='fin_btn'  onClick={()=>terminarCompra([])}><Link className="fin_btn" to='/checkout'>FINALIZAR COMPRA</Link></Button>
+       <Button variant="success" className='fin_btn'  onClick={()=>terminarCompra([])}><Link className="fin_btn" to='/checkout'>FINALIZAR COMPRA</Link></Button>
        </div>
     </div>
   )
