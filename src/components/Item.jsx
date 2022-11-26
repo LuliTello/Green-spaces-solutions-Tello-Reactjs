@@ -8,7 +8,7 @@ export default function Item({el}) {
   return (
     <div className='card'>
       
-        <Card className='card-item' style={{ width: '18rem', }}>
+        <Card className='card-item' style={{ width: '20rem', }}>
       <Card.Img className='card-image' variant="top" src={el.image} alt={el.image} />
       <Card.Body>
         <Card.Title className='card-title'>{el.name}</Card.Title>

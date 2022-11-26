@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     margin: 1rem 0;
 }
-.btn_seguir{
+.btn_seguir,.fin_btn{
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;

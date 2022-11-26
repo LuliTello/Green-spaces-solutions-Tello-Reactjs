@@ -15,7 +15,7 @@ function terminarCompra(){
 if(carrito.length === 0){
   return(
   <>
-  <div style={{margin: '1rem auto', textAlign: 'center', backgroundColor:'rgb(240, 253, 165)'}}>
+  <div style={{margin: '1rem auto', textAlign: 'center'}}>
   <p>No hay productos en el carrito.</p>
   <Link className='btn_seguir' to='/'>Seguir comprando</Link>
   </div>
@@ -23,19 +23,16 @@ if(carrito.length === 0){
   );
 }
   return (
-    <div style={{ padding:'2rem 0', backgroundColor:'rgb(240, 253, 165)'}}>
+    <div style={{ padding:'2rem 0'}}>
       <div className='itemCart__flex'>
       {carrito.map(product =>
       <ItemCart key={product.id} product={product}/>)}
       </div>
       <div className='contenedor_total'>
-      <h3>
-        Total USD: {totalPrice()}
-       </h3>
-       <Button className='clear_btn' variant="success" onClick = {()=> clear()}>Vaciar Carrito</Button>
+       <Button className='clear_btn' variant="success" onClick = {()=> clear()}>VACIAR CARRITO</Button>
        
 
-       <Button onClick={()=>terminarCompra([])}><Link to='/checkout'>FINALIZAR COMPRA</Link></Button>
+       <Button className='fin_btn'  onClick={()=>terminarCompra([])}><Link className="fin_btn" to='/checkout'>FINALIZAR COMPRA</Link></Button>
        </div>
     </div>
   )

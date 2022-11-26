@@ -17,7 +17,7 @@ export default function ItemDetailContainer() {
   }, [iditem])
     
   return (
-    <div style={{backgroundColor: 'rgb(240, 253, 165) '}}>
+    <div >
            
         <ItemDetail item = {item} />   
         

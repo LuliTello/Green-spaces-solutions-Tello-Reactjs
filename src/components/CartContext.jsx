@@ -23,7 +23,7 @@ function addItem (item, cantidad){
         newCarrito = [...carrito, product];
     }
     setCarrito(newCarrito)
-    console.log(newCarrito)
+    /*console.log(newCarrito)*/
 }
 
 //remover producto del carrito
@@ -44,7 +44,7 @@ useEffect(() => {
   setTotalAPagar(total);
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }, [carrito]);
-console.log('carrito:', carrito);
+/*console.log('carrito:', carrito);*/
 
   return (
     <cartContext.Provider value={{carrito, setCarrito, addItem, isInCart, removeItem, clear, totalPrice, totalProducts, totalAPagar }} >
