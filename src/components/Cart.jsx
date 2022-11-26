@@ -8,9 +8,7 @@ import '../css/Cart.css'
 export default function Cart() {
 
 const {carrito, totalPrice, clear} = useContext(cartContext);
-const [nombre, setNombre] = useState('');
-const [tel, setTel] = useState('');
-const [email, setEmail] = useState('');
+
 function terminarCompra(){
   const totalAPagar= carrito.reduce((acc, item)=>acc + item.price*item.cantidad, 0);
 }
@@ -35,9 +33,7 @@ if(carrito.length === 0){
         Total USD: {totalPrice()}
        </h3>
        <Button className='clear_btn' variant="success" onClick = {()=> clear()}>Vaciar Carrito</Button>
-       <input type="text" placeholder='nombre' value={nombre} onChange={(e)=>setNombre(e.target.value)} />
-      <input type="number" placeholder='Telefono' value={tel} onChange={(e)=>setTel(e.target.value)}/>
-      <input type="email" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
+       
 
        <Button onClick={()=>terminarCompra([])}><Link to='/checkout'>FINALIZAR COMPRA</Link></Button>
        </div>
