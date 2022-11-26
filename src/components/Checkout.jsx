@@ -4,10 +4,13 @@ import { cartContext } from './CartContext';
 import {addDoc, collection, getFirestore} from 'firebase/firestore';
 
 export default function Checkout() {
-const {carrito, totalAPagar} = useContext(cartContext);
-const [nombre, setNombre] = useState('')
-const [tel, setTel] = useState('')
-const [email, setEmail] = useState('')
+
+const {carrito, totalAPagar, clear } = useContext(cartContext);
+const [nombre, setNombre] = useState('');
+const [tel, setTel] = useState('');
+const [email, setEmail] = useState('');
+const [pedidoInsertadoId, setPedidoInsertadoId] = useState('');
+
 function handleClickBuyButton(){
     const pedido = {
       comprador: {name:nombre, tel: tel, email:email},
@@ -17,13 +20,19 @@ function handleClickBuyButton(){
     //console.log(pedido)
     const db = getFirestore();
     const pedidos = collection(db, 'pedidos');
-    addDoc(pedidos, pedido).then((pedidoInsertado)=>{
-      console.log(pedidoInsertado)
+    addDoc(pedidos, pedido).then(({id})=>{
+      setPedidoInsertadoId(id);
+      clear();
     })
 }
 
   return (
+    <>
+    {pedidoInsertadoId ? (
+      "Gracias por su compra! El N° de pedido es: " + pedidoInsertadoId 
+       ) : (
     <div >
+      <h2>Ingrese sus datos para terminar la compra</h2>
       <div>
       {carrito.map((item)=>(
         <p key={item.id}>{item.name + '' + item.price + '' + item.cantidad}</p>
@@ -37,5 +46,7 @@ function handleClickBuyButton(){
       <button type='button' onClick={handleClickBuyButton} value="Comprar"></button>
     </div>
     </div>
+    )}
+    </>
   )
 }

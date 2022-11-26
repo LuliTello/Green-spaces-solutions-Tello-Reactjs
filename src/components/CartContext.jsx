@@ -41,8 +41,10 @@ const totalProducts = () => carrito.reduce((acc,product)=> acc + product.cantida
 
 useEffect(() => {
   const total = carrito.reduce((acc, product)=> acc + product.cantidad * product.price, 0);
-  setTotalAPagar(total)
-}, [carrito])
+  setTotalAPagar(total);
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}, [carrito]);
+console.log('carrito:', carrito);
 
   return (
     <cartContext.Provider value={{carrito, setCarrito, addItem, isInCart, removeItem, clear, totalPrice, totalProducts, totalAPagar }} >

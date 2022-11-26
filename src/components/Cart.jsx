@@ -39,7 +39,7 @@ if(carrito.length === 0){
       <input type="number" placeholder='Telefono' value={tel} onChange={(e)=>setTel(e.target.value)}/>
       <input type="email" placeholder='Email' value={email} onChange={(e)=>setEmail(e.target.value)}/>
 
-       <Button onClick={()=>terminarCompra([])}>Terminar Compra</Button>
+       <Button onClick={()=>terminarCompra([])}><Link to='/checkout'>FINALIZAR COMPRA</Link></Button>
        </div>
     </div>
   )

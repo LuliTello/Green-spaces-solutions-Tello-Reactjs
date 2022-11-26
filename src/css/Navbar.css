@@ -4,9 +4,10 @@
 .link-inicio,.link-contacto,.link-checkout{
     text-transform: uppercase;
     text-decoration: none;
-    margin-top: 2rem;
-    
+    margin-top: 2rem;   
 }
+.link-inicio{
+    margin-right: 1rem ;}
 .link-checkout{
     margin-right: 1rem;
 }
@@ -15,8 +16,10 @@
 }
 .link-categoria{
     text-decoration: none;
+    text-transform: uppercase;
     color: #000;
     font-weight: bold;
     text-align: center;
-    margin:0 0.5rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
 }
