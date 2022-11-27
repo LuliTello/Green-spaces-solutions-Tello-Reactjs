@@ -1,8 +1,4 @@
-.contenido{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .itemCart__flex{
     display: flex;
     flex-direction: row;
@@ -16,21 +12,33 @@
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
-    
+    box-shadow: 0.3rem 0.3rem rgb(92, 243, 92);
+    background-color: rgb(9, 99, 39);
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.3rem;
     
 }
+.texto_seguir{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 1rem auto;
+}
 .contenedor_btn{
-    text-align: right;
+    text-align: center;
     margin-right: 1rem;
     margin-left: 2rem ;
     display: flex;
     flex-direction: column;
+    
+}
+.texto_total{
+    font-size: 1.5rem
 }
 .clear_btn, .fin_btn{
    
     color: #000;
     font-weight: bold;
     margin: 0.5rem auto;
+    box-shadow: 0.3rem 0.3rem rgb(92, 243, 92);
 }

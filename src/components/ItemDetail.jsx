@@ -24,15 +24,15 @@ export default function ItemDetail({item}) {
       {item.id ? (
         <>
       
-      <Card className='card-detail' style={{ width: '50rem' }}>
+      <Card className='card-detail'>
         <div>
     <Card.Img className='card-image' variant="top" src={item.image} alt={item.image} />
     </div>
     <div>
     <Card.Body>
-      <Card.Title className='card-title'>{item.name}</Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">{item.description}</Card.Subtitle>
-      <Card.Text className='card-price'>
+      <Card.Title style={{marginTop:'1rem'}} className='card-title'>{item.name}</Card.Title>
+      <Card.Subtitle style={{marginTop:'1rem'}} className="mb-2 text-muted">{item.description}</Card.Subtitle>
+      <Card.Text style={{margin:'1rem'}} className='card-price'>
         Precio Unitario USD {item.price}
       </Card.Text>
       <Card.Text>Stock disponible: {item.stock}</Card.Text>
@@ -41,7 +41,7 @@ export default function ItemDetail({item}) {
         : <ItemCount initial={1} stock={item.stock} onAdd={onAdd}/>
       }
       
-      <Card.Text style={{marginTop:'1rem'}} > *Precio por {item.unit}</Card.Text>
+      <Card.Text style={{marginTop:'2rem'}} > *Precio por {item.unit}</Card.Text>
     </Card.Body>
     </div>
   </Card>

@@ -16,7 +16,7 @@ if(carrito.length === 0){
   return(
   <>
   <div style={{margin: '1rem auto', textAlign: 'center'}}>
-  <p>No hay productos en el carrito.</p>
+  <p className='texto_seguir'>No hay productos en el carrito.</p>
   <Link className='btn_seguir' to='/'>Seguir comprando</Link>
   </div>
   </>
@@ -30,7 +30,7 @@ if(carrito.length === 0){
       </div>
       <div className='contenedor_btn'>
 
-        <h3>Total Compra USD: {totalPrice()}</h3>
+        <h3 className='texto_total'>Total Compra USD: {totalPrice()}</h3>
        <Button className='clear_btn' variant="success" onClick = {()=> clear()}>VACIAR CARRITO</Button>
        
        <Button variant="success" className='fin_btn'  onClick={()=>terminarCompra([])}><Link className="fin_btn" to='/checkout'>FINALIZAR COMPRA</Link></Button>
