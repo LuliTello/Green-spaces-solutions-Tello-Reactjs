@@ -15,9 +15,9 @@ export default function ItemCart({product}) {
       <Card.Body>
         <Card.Title>{product.name}</Card.Title>
         <Card.Subtitle>{product.description}</Card.Subtitle>
-        <Card.Text style={{marginTop:'1rem', fontWeight:'bold'}}>Cantidad {product.cantidad}</Card.Text>
+        <Card.Text style={{marginTop:'1rem', fontWeight:'bold'}}>Cantidad {product.quantity}</Card.Text>
         <Card.Text className='cart_price'>Precio unitario USD: {product.price}</Card.Text>
-        <Card.Text className='cart_subtotal'>Subtotal USD: {product.cantidad * product.price}</Card.Text>
+        <Card.Text className='cart_subtotal'>Subtotal USD: {product.quantity * product.price}</Card.Text>
         <Button className='remove_item' variant="success" onClick={()=> removeItem(product.id)}>Eliminar producto</Button>
       </Card.Body>
     </Card>

@@ -7,12 +7,12 @@ import '../css/Cart.css'
 
 export default function Cart() {
 
-const {carrito, totalPrice, clear} = useContext(cartContext);
+const {cart, totalPrice, clear} = useContext(cartContext);
 
 function terminarCompra(){
-  const totalAPagar= carrito.reduce((acc, item)=>acc + item.price*item.cantidad, 0);
+  const totalAPagar= cart.reduce((acc, item)=>acc + item.price*item.quantity, 0);
 }
-if(carrito.length === 0){
+if(cart.length === 0){
   return(
   <>
   <div style={{margin: '1rem auto', textAlign: 'center'}}>
@@ -25,7 +25,7 @@ if(carrito.length === 0){
   return (
     <div className='contenido' style={{ padding:'2rem 0'}}>
       <div className='itemCart__flex'>
-      {carrito.map(product =>
+      {cart.map(product =>
       <ItemCart key={product.id} product={product}/>)}
       </div>
       <div className='contenedor_btn'>

@@ -6,7 +6,7 @@ import {addDoc, collection, doc, getFirestore, increment, updateDoc} from 'fireb
 
 export default function Checkout() {
 
-const {carrito, totalAPagar, clear } = useContext(cartContext);
+const {cart, totalAPagar, clear } = useContext(cartContext);
 const [nombre, setNombre] = useState('');
 const [tel, setTel] = useState('');
 const [email, setEmail] = useState('');
@@ -15,7 +15,7 @@ const [pedidoInsertadoId, setPedidoInsertadoId] = useState('');
 function handleClickBuyButton(){
     const pedido = {
       comprador: {name:nombre, tel: tel, email:email},
-      carrito: carrito,
+      cart: cart,
       total: totalAPagar,
     };
     //console.log(pedido)
@@ -23,7 +23,7 @@ function handleClickBuyButton(){
     const pedidos = collection(db, 'pedidos');
     addDoc(pedidos, pedido).then(({id})=>{
       setPedidoInsertadoId(id);
-      /*carrito.forEach(item=>{
+      /*cart.forEach(item=>{
         const documento = doc(db, 'productos', item.id);
         updateDoc(documento, { stock: increment(-item.stock) });
       });*/

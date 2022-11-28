@@ -13,10 +13,10 @@ export default function ItemDetail({item}) {
   const [cart, setCart] = useState(false);
 
   const { addItem} = useContext(cartContext)
-    const onAdd = (cantidad) =>{
+    const onAdd = (quantity) =>{
         setCart(true);
-        addItem(item, cantidad)
-        console.log(`compraste ${cantidad} unidades`);
+        addItem(item, quantity)
+        console.log(`compraste ${quantity} unidades`);
      }
 
   return (
