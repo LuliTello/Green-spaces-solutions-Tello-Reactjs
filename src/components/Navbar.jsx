@@ -22,9 +22,9 @@ function Nabvar() {
           <Nav className="me-auto">
             <Link style={{ color:'#000',fontWeight:'bold'}} className='link-inicio' to="/">Inicio</Link>
             
-              <Link className='link-categoria' to="/category/fertilizantes">Fertilizantes</Link>
-              <Link className='link-categoria' to="/category/herbicidas">Herbicidas</Link>
-              <Link className='link-categoria' to="/category/insecticidas">Insecticidas</Link>
+              <Link style={{color:'#000'}} className='link-categoria' to="/category/fertilizantes">Fertilizantes</Link>
+              <Link style={{color:'#000'}} className='link-categoria' to="/category/herbicidas">Herbicidas</Link>
+              <Link style={{color:'#000'}} className='link-categoria' to="/category/insecticidas">Insecticidas</Link>
             
             <Link style={{ color:'#000',fontWeight:'bold'}} className='link-checkout' to="/checkout">Checkout</Link>
             <Link style={{ color:'#000',fontWeight:'bold'}} className='link-contacto' to="/contacto">Contacto</Link>

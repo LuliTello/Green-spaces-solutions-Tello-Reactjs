@@ -16,7 +16,6 @@ export default function ItemDetail({item}) {
     const onAdd = (quantity) =>{
         setCart(true);
         addItem(item, quantity)
-        console.log(`compraste ${quantity} unidades`);
      }
 
   return (
