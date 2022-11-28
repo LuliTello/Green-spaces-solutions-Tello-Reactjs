@@ -7,7 +7,7 @@ export const cartContext = createContext();
 export default function CartContext({children}) {
 
 const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart"))||[]);
-const [totalAPagar, setTotalAPagar] = useState([])
+const [totalToPay, setTotalToPay] = useState([])
 //verificar si esta el producto en el cart
 const isInCart = (id) => cart.find(product=>product.id === id) ? true : false;
 
@@ -41,13 +41,13 @@ const totalProducts = () => cart.reduce((acc,product)=> acc + product.quantity, 
 
 useEffect(() => {
   const total = cart.reduce((acc, product)=> acc + product.quantity * product.price, 0);
-  setTotalAPagar(total);
+  setTotalToPay(total);
   localStorage.setItem("cart", JSON.stringify(cart));
 }, [cart]);
 /*console.log('cart:', cart);*/
 
   return (
-    <cartContext.Provider value={{cart, setCart, addItem, isInCart, removeItem, clear, totalPrice, totalProducts, totalAPagar }} >
+    <cartContext.Provider value={{cart, setCart, addItem, isInCart, removeItem, clear, totalPrice, totalProducts, totalToPay }} >
         {children}
     </cartContext.Provider>
   )

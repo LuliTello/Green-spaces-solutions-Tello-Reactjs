@@ -5,32 +5,32 @@ import '../css/ItemCount.css';
 export default function ItemCount({initial, stock, onAdd}) {
 
 //contador
-    const [cont, setCont] = useState(initial);
+    const [count, setCount] = useState(initial);
 
-    let sumar = () =>{
-      if (cont < stock){
-      setCont(cont + 1)
+    let add = () =>{
+      if (count < stock){
+      setCount(count + 1)
       }
     };
 
-    let restar = () =>{
-      if (cont > 0){
-      setCont(cont - 1)
+    let subtract = () =>{
+      if (count > 0){
+      setCount(count - 1)
       }
     };
     useEffect(() => {
-      setCont(initial)
+      setCount(initial)
 
     }, [initial])
 
   return (
     <div>
         <div className='contador'>
-        <button className='btn-cont' onClick={restar}>-</button>
-        <p className='contador-num'>{cont}</p>
-      <button className='btn-cont' onClick={sumar}>+</button>
+        <button className='btn-cont' onClick={subtract}>-</button>
+        <p className='contador-num'>{count}</p>
+      <button className='btn-cont' onClick={add}>+</button>
       </div>
-        <button disabled={stock<0} className='btn-agregarcart' onClick={()=>onAdd(cont)}>Agregar al Carrito</button>
+        <button disabled={stock<0} className='btn-agregarcart' onClick={()=>onAdd(count)}>Agregar al Carrito</button>
     </div>
 
   )

@@ -10,7 +10,7 @@ export default function Cart() {
 const {cart, totalPrice, clear} = useContext(cartContext);
 
 function terminarCompra(){
-  const totalAPagar= cart.reduce((acc, item)=>acc + item.price*item.quantity, 0);
+  const totalToPay= cart.reduce((acc, item)=>acc + item.price*item.quantity, 0);
 }
 if(cart.length === 0){
   return(
