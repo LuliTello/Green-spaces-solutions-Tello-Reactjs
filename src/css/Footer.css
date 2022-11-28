@@ -17,3 +17,11 @@
     margin-left: 0.5rem;
     text-decoration: none;
   }
+  @media(max-width:768px){
+    .footer{
+        flex-direction: column;
+    }
+    .footer__icons{
+      margin-top: 1rem;
+    }
+  }

@@ -6,17 +6,21 @@
     flex-wrap: wrap;
     margin: 1rem 0;
 }
-.btn_seguir,.fin_btn{
+.btn_seguir{
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     color: #000;
     font-weight: bold;
-    box-shadow: 0.3rem 0.3rem rgb(92, 243, 92);
-    background-color: rgb(9, 99, 39);
+    box-shadow: 0 0 0.1rem 0.1rem rgb(2, 31, 3);
+    background-color:  rgb(52, 192, 71);
     border-radius: 0.5rem;
     padding: 0.3rem;
     
+}
+.fin_link{
+    text-decoration: none;
+    color: #000;
 }
 .texto_seguir{
     font-size: 1.5rem;
@@ -40,5 +44,6 @@
     color: #000;
     font-weight: bold;
     margin: 0.5rem auto;
-    box-shadow: 0.3rem 0.3rem rgb(92, 243, 92);
+    background-color:  rgb(52, 192, 71);
+    box-shadow: 0 0 0.2rem 0.2rem rgb(2, 31, 3);
 }

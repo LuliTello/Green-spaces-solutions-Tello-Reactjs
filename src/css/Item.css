@@ -22,7 +22,8 @@
 }
 .link-detalle{
     text-decoration: none;
-    background-color: rgb(9, 99, 39);
+    background-color: rgb(52, 192, 71);
+    box-shadow: 0 0 0.1rem 0.1rem rgb(2, 31, 3);
     color: #000;
     font-weight: bold;
     padding: 0.5rem;

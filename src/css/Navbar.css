@@ -23,3 +23,12 @@
     margin-top: 2rem;
     margin-right: 1rem;
 }
+
+@media(max-width: 992px){
+    .me-auto{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+   
+}

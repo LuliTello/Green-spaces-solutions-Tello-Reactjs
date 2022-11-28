@@ -1,5 +1,11 @@
-.btn-card{
+.btn-cart{
     color: #000;
     border-radius: 0.5rem;
     background-color: rgb(27, 136, 41);
+    box-shadow: 0rem 0rem 0.3rem 0.3rem rgb(91, 245, 111);
+}
+@media(max-width:992px){
+    .btn-cart{
+        margin: 1rem auto;
+    }
 }

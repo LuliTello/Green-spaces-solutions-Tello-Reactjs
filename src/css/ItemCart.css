@@ -20,5 +20,6 @@
 .remove_item{
     color: black;
     font-weight: bold;
-    box-shadow: 0.3rem 0.3rem rgb(92, 243, 92);
+    background-color: rgb(52, 192, 71);;
+    box-shadow: 0 0 0.2rem 0.2rem rgb(2, 31, 3);
 }

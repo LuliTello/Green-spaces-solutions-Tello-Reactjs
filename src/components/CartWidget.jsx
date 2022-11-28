@@ -10,7 +10,7 @@ export default function CartWidget() {
   const {totalProducts} = useContext(cartContext)
   return (
     <div>
-      <button className='btn-card'>
+      <button className='btn-cart'>
       <Badge text="dark" bg="transparent">
       <Cart4 style={{color:'000'}} size={26} />
       {totalProducts()}</Badge>

@@ -33,7 +33,7 @@ if(carrito.length === 0){
         <h3 className='texto_total'>Total Compra USD: {totalPrice()}</h3>
        <Button className='clear_btn' variant="success" onClick = {()=> clear()}>VACIAR CARRITO</Button>
        
-       <Button variant="success" className='fin_btn'  onClick={()=>terminarCompra([])}><Link className="fin_btn" to='/checkout'>FINALIZAR COMPRA</Link></Button>
+       <Button variant="success" className='fin_btn'  onClick={()=>terminarCompra([])}><Link className="fin_link" to='/checkout'>FINALIZAR COMPRA</Link></Button>
        </div>
     </div>
   )

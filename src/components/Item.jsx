@@ -16,7 +16,7 @@ export default function Item({el}) {
         <Card.Text style={{marginTop:'1rem'}} >Presentacion x {el.unit}</Card.Text>
         <div style={{display: 'flex', justifyContent: 'space-evenly'}}>
         <Card.Text className='card-price'> USD {el.price} </Card.Text>
-        <Link className='link-detalle' to={`/item/${el.id}`} variant="success">Ver Detalle</Link>
+        <Link className='link-detalle' to={`/item/${el.id}`}>Ver Detalle</Link>
         </div>
         <Card.Text style={{marginTop:'1rem'}} >Stock disponible {el.stock}</Card.Text>
       </Card.Body>
