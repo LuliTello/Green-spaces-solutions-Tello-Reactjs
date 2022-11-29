@@ -6,7 +6,7 @@ import '../css/Item.css';
 export default function Item({el}) {
 
   return (
-    <div className='card'>
+    
       
         <Card className='card-item' style={{ width: '20rem', }}>
       <Card.Img className='card-image' variant="top" src={el.image} alt={el.image} />
@@ -21,6 +21,6 @@ export default function Item({el}) {
         <Card.Text style={{marginTop:'1rem'}} >Stock disponible {el.stock}</Card.Text>
       </Card.Body>
     </Card>
-    </div>
+   
   )
 }

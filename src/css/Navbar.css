@@ -1,6 +1,4 @@
-.mb-3{
-    text-align: center;
-}
+
 .link-inicio,.link-contacto,.link-checkout{
     text-transform: uppercase;
     text-decoration: none;
@@ -31,4 +29,9 @@
         flex-wrap: wrap;
     }
    
+}
+@media(max-width: 480px){
+    .navbar-toggler{
+        margin-right: 1rem;
+    }
 }

@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div>
         <footer className="footer">
-        <p className="footer__title">Green Spaces Solutions</p>
+        <p style={{fontStyle: 'italic'}} className="footer__title">GREEN SPACES SOLUTIONS</p>
         <p className="footer__text">Copyright &copy; 2022. All rights reserved</p>
         <div className="footer__icons">
             <a href="https://es-la.facebook.com/" className="icon_facebook">
