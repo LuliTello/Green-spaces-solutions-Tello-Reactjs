@@ -11,7 +11,7 @@ export default function Footer() {
         <p style={{fontStyle: 'italic'}} className="footer__title">GREEN SPACES SOLUTIONS</p>
         <p className="footer__text">Copyright &copy; 2022. All rights reserved</p>
         <div className="footer__icons">
-            <a href="https://es-la.facebook.com/" className="icon_facebook">
+            l<a href="https://es-la.facebook.com/" className="icon_facebook">
                 <Facebook size={25}/>
             </a>
             <a href="https://instagram.com" className="icon_instagram">
