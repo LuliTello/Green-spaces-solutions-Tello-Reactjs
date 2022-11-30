@@ -26,3 +26,22 @@
     margin-bottom: 1rem!important;
     margin-left: 0.5rem;
 }
+@media(max-width:992px){
+    .card-detail{
+         width: 40rem;
+    }
+    .btn-seguir{
+        display: block;
+        padding: 0.2rem;
+    }
+    .btn-finalizar{
+        display: block; 
+        padding: 0.2rem;
+    }
+}
+@media(max-width:768px){
+    .card-detail{
+        flex-direction: column;
+        width: 20rem;
+    }
+}

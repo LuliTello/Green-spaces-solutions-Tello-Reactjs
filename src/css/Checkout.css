@@ -79,7 +79,7 @@ h5{
     }
     
 }
-@media(max-width:576px){
+@media(max-width:680px){
     
     .contenedor{
         flex-direction:column-reverse
