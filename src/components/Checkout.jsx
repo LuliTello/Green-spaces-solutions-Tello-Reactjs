@@ -40,18 +40,11 @@ function validarForm(evt) {
 
   return (
     <>
-    {placeOrderId ? (
-       <Alert className='texto_alert'variant="success">
-      Gracias por su compra! El detalle llegará en breve a su email. Su número de pedido es: {placeOrderId}
-      
-      <Button className='btn_continue'><Link className='link_continue' to="/">Continue Comprando</Link></Button>
-      
-      </Alert>) : (
-
+    {cart.length? (
+    <>
     <div >
-    
       <h2 className='check_titulo'>Ingrese sus datos para terminar la compra</h2>
-      <div className='contenedor'>
+    <div className='contenedor'>
     <div className='contenedor_formulario'>
       <form onSubmit={validarForm} className='formulario'>
       <input type="text" name='Nombre y apellido' placeholder='Nombre y Apellido' value={name} onChange={(e)=>setName(e.target.value)} required/>
@@ -75,7 +68,15 @@ function validarForm(evt) {
     </div>
     </div>
     </div>
-    )}
+        </>
+        ):placeOrderId ? (
+       <Alert className='texto_alert'variant="success">
+      Gracias por su compra! El detalle llegará en breve a su email. Su número de pedido es: {placeOrderId}
+      <Button className='btn_continue'><Link className='link_continue' to="/">Continue Comprando</Link></Button>
+      </Alert>) : (    
+    <>
+    <h3 className='texto_alert'>Por favor realice una compra!</h3></>)}
     </>
+    
   )
 }

@@ -32,10 +32,12 @@ input{
     box-shadow: 0 0 0.2rem 0.2rem rgb(2, 31, 3);
 }
 .texto_alert{
+    margin: 2rem auto;
     font-size: 1.5rem;
     color: #000;
     font-weight: bold;
     text-align: center;
+    font-style: italic;
 }
 .btn_continue{
     display: block;
