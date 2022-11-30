@@ -36,10 +36,10 @@ export default function Checkout() {
     const orders = collection(db, "pedidos");
     addDoc(orders, order).then(({ id }) => {
       setPlaceOrderId(id);
-      /*cart.forEach(item=>{
+      cart.forEach(item=>{
         const documento = doc(db, 'productos', item.id);
         updateDoc(documento, { stock: increment(-item.quantity) });
-      });*/
+      });
 
       clear();
     });

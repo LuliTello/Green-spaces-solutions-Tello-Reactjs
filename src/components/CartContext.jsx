@@ -24,7 +24,7 @@ export default function CartContext({ children }) {
       newCart = [...cart, product];
     }
     setCart(newCart);
-    /*console.log(newCart)*/
+    
   }
 
   //remover producto del cart
@@ -47,7 +47,7 @@ export default function CartContext({ children }) {
     setTotalToPay(total);
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
-  /*console.log('cart:', cart);*/
+  
 
   return (
     <cartContext.Provider
