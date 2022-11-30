@@ -31,13 +31,58 @@ input{
     background-color: rgb(14, 121, 28);
     box-shadow: 0 0 0.2rem 0.2rem rgb(2, 31, 3);
 }
-
-@media(max-width:768px){
+.texto_alert{
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+.btn_continue{
+    display: block;
+    font-weight: bold;
+    margin: 2rem auto;
+    background-color:  rgb(52, 192, 71);
+    box-shadow: 0 0 0.2rem 0.2rem rgb(2, 31, 3);
+}
+.link_continue{
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.checkout_card{
+    font-weight: bold;
+    background-color:  rgb(52, 192, 71);
+    
+}
+.total_checkout{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+.contenedor_card{
+    box-shadow: 0 0 0.2rem 0.2rem rgb(2, 31, 3);
+}
+h5{
+    margin: 2rem auto;
+}
+@media(max-width:992px){
     .formulario{
         width: 30rem;
     }
+    
 }
-
+@media(max-width:576px){
+    
+    .contenedor{
+        flex-direction:column-reverse
+    }
+}
 @media(max-width:480px){
     .formulario{
         width: 20rem;

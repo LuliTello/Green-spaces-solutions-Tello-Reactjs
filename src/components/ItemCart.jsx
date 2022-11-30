@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import '../css/ItemCart.css';
 import { useContext } from 'react'
 import { cartContext } from './CartContext'
+import {Trash} from 'react-bootstrap-icons';
 
 export default function ItemCart({product}) {
 
@@ -18,7 +19,7 @@ export default function ItemCart({product}) {
         <Card.Text style={{marginTop:'1rem', fontWeight:'bold'}}>Cantidad {product.quantity}</Card.Text>
         <Card.Text className='cart_price'>Precio unitario USD: {product.price}</Card.Text>
         <Card.Text className='cart_subtotal'>Subtotal USD: {product.quantity * product.price}</Card.Text>
-        <Button className='remove_item' variant="success" onClick={()=> removeItem(product.id)}>Eliminar producto</Button>
+        <Button  className='remove_item' variant="success" onClick={()=> removeItem(product.id)}>Eliminar producto <Trash size={20}/> </Button>
       </Card.Body>
     </Card>
     </div>
