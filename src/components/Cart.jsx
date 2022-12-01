@@ -36,7 +36,7 @@ export default function Cart() {
 
         <Button variant="success" className="fin_btn" onClick={() => totalToPay}>
           <Link style={{color:'#000'}}className="fin_link" to="/checkout">
-            COMPRAR CARRITO
+            IR A PAGAR
           </Link>
         </Button>
       </div>
