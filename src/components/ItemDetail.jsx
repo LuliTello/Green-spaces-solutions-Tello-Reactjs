@@ -51,10 +51,10 @@ export default function ItemDetail({ item }) {
                 {cart ? (
                   <div className="contenedor_btns">
                     {" "}
-                    <Link className="btn-seguir" to={"/"}>
+                    <Link style={{color:'#000'}} className="btn-seguir" to={"/"}>
                       Seguir Comprando
                     </Link>{" "}
-                    <Link className="btn-finalizar" to={"/cart"}>
+                    <Link style={{color:'#000'}} className="btn-finalizar" to={"/cart"}>
                       Finalizar compra
                     </Link>
                   </div>

@@ -22,7 +22,7 @@ export default function Item({ el }) {
         </Card.Text>
         <div style={{ display: "flex", justifyContent: "space-evenly" }}>
           <Card.Text className="card-price"> USD {el.price} </Card.Text>
-          <Link className="link-detalle" to={`/item/${el.id}`}>
+          <Link style={{color:'#000'}}className="link-detalle" to={`/item/${el.id}`}>
             Ver Detalle
           </Link>
         </div>

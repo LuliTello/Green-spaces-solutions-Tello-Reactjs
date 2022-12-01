@@ -3,15 +3,7 @@ import { useState } from "react";
 import { cartContext } from "./CartContext";
 import "../css/Checkout.css";
 import Alert from "react-bootstrap/Alert";
-import {
-  addDoc,
-  collection,
-  doc,
-  getFirestore,
-  increment,
-  updateDoc,
-} from "firebase/firestore";
-import Button from "react-bootstrap/esm/Button";
+import {addDoc, collection, doc, getFirestore, increment, updateDoc} from "firebase/firestore";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import { Envelope } from "react-bootstrap-icons";
@@ -113,11 +105,11 @@ export default function Checkout() {
           pueda hacer el seguimiento <Envelope size={30} />
           <br></br>
           Su número de pedido es: {placeOrderId}
-          <Button className="btn_continue">
-            <Link className="link_continue" to="/">
-              Continue Comprando
+          <button className="btn_continue">
+            <Link style={{color:'#000'}} className="link_continue" to="/">
+              Volver al inicio
             </Link>
-          </Button>
+          </button>
         </Alert>
       ) : (
         <>

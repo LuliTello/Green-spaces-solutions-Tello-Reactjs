@@ -40,7 +40,9 @@ input{
     font-style: italic;
 }
 .btn_continue{
+    font-size: 1rem;
     display: block;
+    border-radius: 0.5rem;
     font-weight: bold;
     margin: 2rem auto;
     background-color:  rgb(52, 192, 71);
