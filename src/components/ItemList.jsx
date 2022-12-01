@@ -10,7 +10,7 @@ export default function ItemList({listado}) {
       {!listado.length && <ProgressBar variant='success' animated now={45} />}
         {
         listado.map((el) => {
-           return <div key={el.id}> 
+           return <div style={{width:'20rem', margin:'0 auto'}} key={el.id}> 
            
            <Item el={el} /></div>
         })

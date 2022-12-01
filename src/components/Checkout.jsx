@@ -73,7 +73,7 @@ export default function Checkout() {
                     required
                   />
                   <button className="btn_check" type="submit" value="Comprar">
-                    COMPRAR
+                    CONFIRMAR COMPRAR
                   </button>
                 </form>
               </div>
